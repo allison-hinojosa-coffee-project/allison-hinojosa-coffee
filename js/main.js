@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
+    // html += '<td>' + coffee.id + '</td>';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -47,6 +47,19 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+function myFunction() {
+    var input, filter, i;
+    var newCoffee = [];
+    input = document.getElementById("myInput")
+    filter = input.value.toUpperCase();
+    for (i = 0; i < coffees.length; i++) {
+        if (i.name.toUpperCase().includes(filter)) {
+            newCoffee.push(i)
+            newCoffee.display
+        }
+    }
+}
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');

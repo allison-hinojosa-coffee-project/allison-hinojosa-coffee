@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
+    // html += '<td>' + coffee.id + '</td>';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -12,7 +12,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -48,6 +48,20 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+function myFunction() {
+    var input, filter, i;
+    var newCoffee = [];
+    input = document.getElementById("myInput")
+    filter = input.value.toUpperCase();
+    // for (i = 0; i < coffees.length; i++) {
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toUpperCase().includes(filter.toUpperCase())) {
+            newCoffee.push(coffee)
+            console.log(newCoffee)
+            tbody.innerHTML = renderCoffees(newCoffee);
+        }})
+}
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -55,3 +69,8 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+// .getElementById("search-box")
+// .addEventListener("keyup", function() {
+//     var input = coffees
+//     document.getElementById("search-box");
+// })

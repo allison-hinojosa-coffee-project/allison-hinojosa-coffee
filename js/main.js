@@ -56,10 +56,11 @@ function myFunction() {
     // for (i = 0; i < coffees.length; i++) {
     coffees.forEach(function(coffee) {
         if (coffee.name.toUpperCase().includes(filter.toUpperCase())) {
-        newCoffee.push(coffee)
-        console.log(newCoffee)
+            newCoffee.push(coffee)
+            console.log(newCoffee)
             tbody.innerHTML = renderCoffees(newCoffee);
-    }})
+        }})
+
 }
 
 var tbody = document.querySelector('#coffees');

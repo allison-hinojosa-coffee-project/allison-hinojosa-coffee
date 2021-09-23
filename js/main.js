@@ -53,12 +53,13 @@ function myFunction() {
     var newCoffee = [];
     input = document.getElementById("myInput")
     filter = input.value.toUpperCase();
-    for (i = 0; i < coffees.length; i++) {
-        if (i.name.toUpperCase().includes(filter)) {
-            newCoffee.push(i)
-            newCoffee.display
-        }
-    }
+    // for (i = 0; i < coffees.length; i++) {
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toUpperCase().includes(filter.toUpperCase())) {
+        newCoffee.push(coffee)
+        console.log(newCoffee)
+            tbody.innerHTML = renderCoffees(newCoffee);
+    }})
 }
 
 var tbody = document.querySelector('#coffees');

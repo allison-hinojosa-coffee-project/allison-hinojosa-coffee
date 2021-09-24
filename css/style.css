@@ -8,3 +8,13 @@ td, th {
     padding: 5px 10px;
 }
 
+.col{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.coffee-selection {
+    flex-wrap: wrap;
+    justify-content: flex-start
+}

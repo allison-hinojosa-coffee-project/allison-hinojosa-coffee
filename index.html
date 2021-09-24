@@ -2,103 +2,104 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <title></title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Coffee!</h1>
 
-<!--    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
-<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>-->
+<!--<div>-->
+<!--<h1>Coffee!</h1>-->
 
-<form>
-    <label for="roast-selection"></label>
-    <label for ="myInput"></label><input type="text" id = "myInput" onkeyup="myFunction()" placeholder="Search for Coffee by Name">
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-        <option>all</option>
-    </select>
-    <input id="submit" type="submit" />
-</form>
+<div class="row justify-content-center align-items-center">
+    <h1>Coffee!</h1>
+</div>
 
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>NAME</th>
-        <th>ROAST</th>
-    </tr>
-    </thead>
-    <tbody id="coffee"></tbody>
-</table>
+<div class="container">
+    <div class="row">
+        <div class="col">COL ONE <!--        THIS CAN BE DELETED, I PUT JUST FOR MY OWN REFERENCE-->
+            <div>
+                <div class="col" id="coffees">
+                    <div>ID</div>
+                    <div>NAME</div>
+                    <div>ROAST</div>
+                </div>
+            </div>
+        </div>
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
 
-<div>
-    <div class="row" id= "coffees">
-        <div>ID</div>
-        <div>NAME</div>
-        <div>ROAST</div>
+        <div class="col">COL TWO <!--        THIS CAN BE DELETED, I PUT JUST FOR MY OWN REFERENCE-->
+            <form class="coffee-selection">
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                    <option>all</option>
+                </select>
+                <!--                        <input id="submit" type="submit"/>-->
+                <label for="myInput"></label><input type="text" id="myInput" onkeyup="myFunction()"
+                                                    placeholder="Search for Coffee by Name">
+                <input id="submit" type="submit"/>
+            </form>
+        </div>
+
     </div>
 </div>
 
-<div class = "input-group rounded mb-4">
-    <!--        <input-->
-    <!--                type="search"-->
-    <!--                id="search-box"-->
-    <!--                class="form-control rounded"-->
-    <!--                placeholder="Search for Coffee"-->
-    <!--                aria-label="Search"-->
-    <!--                aria-describedby="search-box">-->
+<!--<div class="container">-->
+<!--    <h1>Coffee!</h1>-->
+<!--    <form>-->
+<!--        <div class="col">-->
+<!--            <label for="roast-selection"></label>-->
+<!--            <select id="roast-selection">-->
+<!--                <option>light</option>-->
+<!--                <option>medium</option>-->
+<!--                <option>dark</option>-->
+<!--                <option>all</option>-->
+<!--            </select>-->
+<!--            <input id="submit" type="submit"/>-->
+<!--            <label for="myInput"></label><input type="text" id="myInput" onkeyup="myFunction()"-->
+<!--                                                placeholder="Search for Coffee by Name">-->
+<!--        </div>-->
+<!--    </form>-->
+
+
+<!--    <div>-->
+<!--        <div class="col" id="coffees">-->
+<!--            <div>ID</div>-->
+<!--            <div>NAME</div>-->
+<!--            <div>ROAST</div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+<!--    <form>-->
+<!--        <select id="roast-selection">-->
+<!--            <option>light</option>-->
+<!--            <option>medium</option>-->
+<!--            <option>dark</option>-->
+<!--            <option>all</option>-->
+<!--        </select>-->
+<!--&lt;!&ndash;        <label for="userCoffee">Coffee Name</label><br>&ndash;&gt;-->
+<!--        <h5>Coffee Name</h5>-->
+<!--        <input type="text" id="userCoffee" name="newCoffee" placeholder="Enter New Coffee Name"><br>-->
+<!--        <input type="submit" value="Submit">-->
+<!--    </form>-->
+
+
 </div>
-<!--    <div class="container my-5">-->
-<!--        <div class="row d-flex justify-content-center">-->
-<!--            <div class="col-lg-6">-->
-<!--                <div class="card">-->
-<!--                    <div class="card-body">-->
-<!--                        &lt;!&ndash; Here goes the search box &ndash;&gt;-->
-<!--                        <div class="input-group rounded">-->
-<!--                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon">-->
-<!--                            <span class="input-group-text border-0" id="search-addon">-->
-<!--              <i class="fas fa-search"></i>-->
-<!--            </span>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; /Here goes the search box &ndash;&gt;-->
-<!--                        <ul class="list-group" id="coffees">-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    TEST TEST, and again TEST-->
 
-<!--    <div class="table">-->
-<!--        <div class="tr">-->
-<!--            <div class="td"></div>-->
-<!--            <div class="td"></div>-->
-<!--        </div>-->
-<!--        <div class="tr">-->
-<!--            <div class="td"></div>-->
-<!--            <div class="td"></div>-->
-<!--        </div>-->
-<!--    </div>-->
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 
 
 <script src="js/main.js"></script>

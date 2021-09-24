@@ -60,6 +60,7 @@ function myFunction() {
             console.log(newCoffee)
             tbody.innerHTML = renderCoffees(newCoffee);
         }})
+
 }
 
 var tbody = document.querySelector('#coffees');

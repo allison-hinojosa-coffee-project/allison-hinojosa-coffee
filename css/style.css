@@ -26,10 +26,15 @@ td, th {
 /*    justify-content: flex-start*/
 /*}*/
 
+
 .choices{
-
+    display: flex;
+    flex-direction: column;
 }
-
+.newOne{
+    display: flex;
+    flex-direction: column;
+}
 
 ::placeholder {
     color: rebeccapurple;
@@ -37,7 +42,10 @@ td, th {
     /*display: flex;*/
     /*justify-content: space-between;*/
 }
-
+#option{
+    justify-content: center;
+    align-items: center;
+}
 
 #coffees{
     /*border: none;*/

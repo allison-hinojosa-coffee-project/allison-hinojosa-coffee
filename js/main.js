@@ -63,19 +63,7 @@ function myFunction() {
 
 }
 
-// function add() {
-//     var input, filter, i;
-//     var newCoffee = [];
-//     input = document.getElementById("ownCoffee")
-//     filter = input.value.toUpperCase();
-//     // for (i = 0; i < coffees.length; i++) {
-//     coffees.forEach(function(coffee) {
-//         if (coffee.name.toUpperCase().includes(filter.toUpperCase())) {
-//             newCoffee.push(coffee)
-//             console.log(newCoffee)
-//             tbody.innerHTML = renderCoffees(newCoffee);
-//         }})
-// }
+
 
 function addCoffee() {
     var text = "";
@@ -98,32 +86,6 @@ function addCoffee() {
 //     btn.innerHTML = "CLICK ME";
 //     document.body.appendChild(btn);
 // }
-
-
-// <button onClick="addCoffee()">Try it</button>
-
-// function addCoffee() {
-// var node = document.createElement("ownCoffee");
-// var textnode = document.createTextNode("input");
-// node.appendChild(textnode);
-// document.getElementById("coffees").appendChild(node);
-// }
-
-// <ul id="myList">
-//     <li>Coffee</li>
-//     <li>Tea</li>
-// </ul>
-//
-// <button onClick="myFunction()">Try it</button>
-//
-// <script>
-//     function myFunction() {
-//     var node = document.createElement("LI");
-//     var textnode = document.createTextNode("Water");
-//     node.appendChild(textnode);
-//     document.getElementById("myList").appendChild(node);
-// }
-// </script>
 
 
 var tbody = document.querySelector('#coffees');

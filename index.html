@@ -21,7 +21,7 @@
 
 <div class="container">
     <div class="choices">
-        <form class="coffee-selection">
+<!--        <form class="coffee-selection">-->
             <label for="roast-selection"></label>
             <select id="roast-selection">
                 <option>all</option>
@@ -29,37 +29,29 @@
                 <option>medium</option>
                 <option>dark</option>
             </select>
-            <br>
-        </form>
-        <!--                        <input id="submit" type="submit"/>-->
-        <!--        <label for="myInput"></label><input type="text" id="myInput" size="50%" onkeyup="myFunction()"-->
-        <!--                                            placeholder="Search for Coffee by Name">-->
+<!--        </form>-->
+
         <label for="myInput"></label><input type="text" id="myInput" onkeyup="myFunction()"
                                             placeholder="Search for Coffee by Name">
-        <br>
-        <input id="submit" type="submit" size="50%">
-        <!--                    </form>-->
+        <input id="submit" type="submit">
     </div>
-
+    <!--                    </form>-->
     <br>
-
-
-    <form>
+    <div class="newOne">
         <label for="ownCoffee">Enter a New Coffee Name</label><br>
-        <input class="newAgain" type="text" id="ownCoffee" name="ownCoffee" value="Add Coffee Name"><br>
-        <!--        <input type="submit" value="Submit">-->
-    </form>
-    <button onClick="addCoffee()">Try it</button>
-
-    <!--        <div class="col">-->
-    <!--            <div class="col">-->
-
-    <!--    <div>-->
-    <div class="col" id="coffees">
-        <div>ID</div>
-        <div>NAME</div>
-        <div>ROAST</div>
+        <input class="newAgain" type="text" id="ownCoffee" name="ownCoffee" placeholder="Add Coffee Name">
+        <input type="submit" onClick="addCoffee()">
     </div>
+</div>
+
+<!--        <div class="col">-->
+<!--            <div class="col">-->
+
+<!--    <div>-->
+<div class="col" id="coffees">
+    <div>ID</div>
+    <div>NAME</div>
+    <div>ROAST</div>
 </div>
 
 

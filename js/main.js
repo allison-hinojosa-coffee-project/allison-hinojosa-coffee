@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<h3>' + coffee.name + '</h3>';
+    html += '<h3>' + coffee.name +'</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -62,13 +62,81 @@ function myFunction() {
         }})
 }
 
+// function add() {
+//     var input, filter, i;
+//     var newCoffee = [];
+//     input = document.getElementById("ownCoffee")
+//     filter = input.value.toUpperCase();
+//     // for (i = 0; i < coffees.length; i++) {
+//     coffees.forEach(function(coffee) {
+//         if (coffee.name.toUpperCase().includes(filter.toUpperCase())) {
+//             newCoffee.push(coffee)
+//             console.log(newCoffee)
+//             tbody.innerHTML = renderCoffees(newCoffee);
+//         }})
+// }
+
+function addCoffee() {
+    var text = "";
+    var inputs = document.querySelectorAll("input[type=text]");
+    for (var i = 0; i < inputs.length; i++) {
+        text += inputs[i].value;
+    }
+    var own = document.createElement("ownCoffee");
+    var node = document.createTextNode(text);
+    own.appendChild(node);
+    document.getElementById("coffees").appendChild(node);
+    // var btn = document.createElement("div");
+    // // btn.innerHTML = "CLICK ME";
+    // document.body.appendChild(btn);
+}
+
+
+// function myFunction() {
+//     var btn = document.createElement("BUTTON");
+//     btn.innerHTML = "CLICK ME";
+//     document.body.appendChild(btn);
+// }
+
+
+// <button onClick="addCoffee()">Try it</button>
+
+// function addCoffee() {
+// var node = document.createElement("ownCoffee");
+// var textnode = document.createTextNode("input");
+// node.appendChild(textnode);
+// document.getElementById("coffees").appendChild(node);
+// }
+
+// <ul id="myList">
+//     <li>Coffee</li>
+//     <li>Tea</li>
+// </ul>
+//
+// <button onClick="myFunction()">Try it</button>
+//
+// <script>
+//     function myFunction() {
+//     var node = document.createElement("LI");
+//     var textnode = document.createTextNode("Water");
+//     node.appendChild(textnode);
+//     document.getElementById("myList").appendChild(node);
+// }
+// </script>
+
+
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var submitButton = document.querySelector('#roast-selection');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+console.log(submitButton)
+
+console.log(renderCoffees(coffees))
+// pick.addEventListener('mousedown', updateCoffees);
+
 // .getElementById("search-box")
 // .addEventListener("keyup", function() {
 //     var input = coffees

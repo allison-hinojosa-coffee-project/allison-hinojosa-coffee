@@ -20,53 +20,48 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col">COL ONE <!--        THIS CAN BE DELETED, I PUT JUST FOR MY OWN REFERENCE...-->
-            <div>
-                <div class="col" id="coffees">
-                    <div>ID</div>
-                    <div>NAME</div>
-                    <div>ROAST</div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col">COL TWO <!--        THIS CAN BE DELETED, I PUT JUST FOR MY OWN REFERENCE...-->
-            <form class="coffee-selection">
-                <label for="roast-selection"></label>
-                <select id="roast-selection">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                    <option>all</option>
-                </select>
-                <!--                        <input id="submit" type="submit"/>-->
-                <label for="myInput"></label><input type="text" id="myInput" onkeyup="myFunction()"
-                                                    placeholder="Search for Coffee by Name">
-                <input id="submit" type="submit"/>
-            </form>
-        </div>
-
+    <div class="choices">
+        <form class="coffee-selection">
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <br>
+        </form>
+        <!--                        <input id="submit" type="submit"/>-->
+        <!--        <label for="myInput"></label><input type="text" id="myInput" size="50%" onkeyup="myFunction()"-->
+        <!--                                            placeholder="Search for Coffee by Name">-->
+        <label for="myInput"></label><input type="text" id="myInput" onkeyup="myFunction()"
+                                            placeholder="Search for Coffee by Name">
+        <br>
+        <input id="submit" type="submit" size="50%">
+        <!--                    </form>-->
     </div>
-</div>
 
-<!--<div class="container">-->
-<!--    <h1>Coffee!</h1>-->
-<!--    <form>-->
-<!--        <div class="col">-->
-<!--            <label for="roast-selection"></label>-->
-<!--            <select id="roast-selection">-->
-<!--                <option>light</option>-->
-<!--                <option>medium</option>-->
-<!--                <option>dark</option>-->
-<!--                <option>all</option>-->
-<!--            </select>-->
-<!--            <input id="submit" type="submit"/>-->
-<!--            <label for="myInput"></label><input type="text" id="myInput" onkeyup="myFunction()"-->
-<!--                                                placeholder="Search for Coffee by Name">-->
-<!--        </div>-->
-<!--    </form>-->
+    <br>
+
+
+    <form>
+        <label for="ownCoffee">Enter a New Coffee Name</label><br>
+        <input class="newAgain" type="text" id="ownCoffee" name="ownCoffee" value="NeW"><br>
+        <!--        <input type="submit" value="Submit">-->
+    </form>
+    <button onClick="addCoffee()">Try it</button>
+
+    <!--        <div class="col">-->
+    <!--            <div class="col">-->
+
+    <!--    <div>-->
+    <div class="col" id="coffees">
+        <div>ID</div>
+        <div>NAME</div>
+        <div>ROAST</div>
+    </div>
+    <!--    </div>-->
+</div>
 
 
 <!--    <div>-->
@@ -91,8 +86,6 @@
 <!--        <input type="submit" value="Submit">-->
 <!--    </form>-->
 
-
-</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

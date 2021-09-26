@@ -60,6 +60,7 @@ function myFunction() {
             console.log(newCoffee)
             tbody.innerHTML = renderCoffees(newCoffee);
         }})
+
 }
 
 // function add() {

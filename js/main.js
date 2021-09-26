@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<h3>' + coffee.name + '</h3>';
+    html += '<h3>' + coffee.name +'</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -63,13 +63,43 @@ function myFunction() {
 
 }
 
+
+
+function addCoffee() {
+    var text = "";
+    var inputs = document.querySelectorAll("input[type=text]");
+    for (var i = 0; i < inputs.length; i++) {
+        text += inputs[i].value;
+    }
+    var own = document.createElement("ownCoffee");
+    var node = document.createTextNode(text);
+    own.appendChild(node);
+    document.getElementById("coffees").appendChild(node);
+    // var btn = document.createElement("div");
+    // // btn.innerHTML = "CLICK ME";
+    // document.body.appendChild(btn);
+}
+
+
+// function myFunction() {
+//     var btn = document.createElement("BUTTON");
+//     btn.innerHTML = "CLICK ME";
+//     document.body.appendChild(btn);
+// }
+
+
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var submitButton = document.querySelector('#roast-selection');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+console.log(submitButton)
+
+console.log(renderCoffees(coffees))
+// pick.addEventListener('mousedown', updateCoffees);
+
 // .getElementById("search-box")
 // .addEventListener("keyup", function() {
 //     var input = coffees

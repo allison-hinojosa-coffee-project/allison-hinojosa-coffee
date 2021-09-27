@@ -28,16 +28,17 @@ td, th {
 
 
 .choices{
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
+    /*flex-wrap: wrap;*/
+
 }
 .newOne{
     display: flex;
-    flex-direction: column;
 }
 
 ::placeholder {
-    color: rebeccapurple;
+    /*color: rebeccapurple;*/
     /*background-color: yellow;*/
     /*display: flex;*/
     /*justify-content: space-between;*/
@@ -61,17 +62,25 @@ td, th {
 
 .coffee{
     width: 200px;
-    border: 7px solid green;
+    border: 7px solid navajowhite;
     padding: 25px;
     margin: 10px;
 }
 
 .jumbotron{
-    background-image: url("/img/coffeeJT.jpg");
+    background-image: url('/img/beans.jpg');
+
     background-size: cover;
     height: 100%;
 }
 
+#coffeeBeans{
+    text-align: center;
+    color: black;
+    border: 1px solid mintcream;;
+    background: grey;
+    opacity: 0.5;
+=======
 #header{
     color: black;
     border: 1px solid mintcream;

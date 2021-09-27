@@ -69,6 +69,7 @@ td, th {
 
 .jumbotron{
     background-image: url('/img/beans.jpg');
+
     background-size: cover;
     height: 100%;
 }
@@ -79,6 +80,11 @@ td, th {
     border: 1px solid mintcream;;
     background: grey;
     opacity: 0.5;
+=======
+#header{
+    color: black;
+    border: 1px solid mintcream;
+
 }
 
 

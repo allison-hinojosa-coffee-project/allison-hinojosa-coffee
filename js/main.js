@@ -73,9 +73,9 @@ function myFunction() {
 function addCoffee(e) {
     e.preventDefault()
     var text = "";
-    var input = document.querySelector("#ownCoffee").value
+    var inputs = document.querySelectorAll("#ownCoffee").value;
     var roastInput = document.querySelector("#roast-selection-new").value
-   var newCoffeeType = {id:coffees.length+1, name:input, roast:roastInput}
+    var newCoffeeType = {id:coffees.length+1, name:input, roast:roastInput}
     coffees.push(newCoffeeType)
     tbody.innerHTML = renderCoffees(coffees)
 }

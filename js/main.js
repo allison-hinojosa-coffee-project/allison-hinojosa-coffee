@@ -75,6 +75,7 @@ function addCoffee() {
     var node = document.createTextNode(text);
     own.appendChild(node);
     document.getElementById("coffees").appendChild(node);
+    // coffees.push(ownCoffee)
     // var btn = document.createElement("div");
     // // btn.innerHTML = "CLICK ME";
     // document.body.appendChild(btn);

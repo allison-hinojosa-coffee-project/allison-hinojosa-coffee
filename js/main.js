@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
+    html += '<td>' + coffee.id + '</td>';
     html += '<h3>' + coffee.name +'</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -71,14 +71,34 @@ function addCoffee() {
     for (var i = 0; i < inputs.length; i++) {
         text += inputs[i].value;
     }
-    var own = document.createElement("ownCoffee");
-    var node = document.createTextNode(text);
-    own.appendChild(node);
-    document.getElementById("coffees").appendChild(node);
+    var ownCoffee = document.createElement("ownCoffee");
+    var typedText = document.createTextNode(text);
+    ownCoffee.appendChild(typedText);
+    document.getElementById("coffees").appendChild(typedText);
     // var btn = document.createElement("div");
     // // btn.innerHTML = "CLICK ME";
     // document.body.appendChild(btn);
 }
+
+
+// function blah() {
+//     var inputs = document.querySelectorAll("input[type=text]");
+//     document.getElementsByTagName("inputs")[0].setAttribute("type", "div");
+// }
+
+// function turnDiv(""){
+//     var turn = document.setAttribute("")
+//     for (var i = 0; i < inputs.length; i++) {
+//         addCoffee += inputs[i].value;
+//     }
+// }
+
+// (function() {
+//     // Get the search link anchor by id
+//     var searchLink = document.getElementById("search-link");
+//     searchLink.setAttribute("class", "btn btn-default");
+// })();
+
 
 
 // function myFunction() {
@@ -89,12 +109,22 @@ function addCoffee() {
 
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#roast-selection');
+// var submitButton = document.querySelector('#roast-selection');
+var submitButton = document.querySelector('#ownCoffee');
 var roastSelection = document.querySelector('#roast-selection');
+
+// var restart = document.querySelector('.originalList');
+// var restart = document.querySelector('#originalList');
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', addCoffee);
+restart.addEventListener('click', renderCoffee)
+
+
+
 console.log(submitButton)
 
 console.log(renderCoffees(coffees))

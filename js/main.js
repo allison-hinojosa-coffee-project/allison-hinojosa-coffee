@@ -80,9 +80,6 @@ function addCoffee() {
     var typedText = document.createTextNode(text);
     ownCoffee.appendChild(typedText);
     document.getElementById("coffees").appendChild(typedText);
-    // var btn = document.createElement("div");
-    // // btn.innerHTML = "CLICK ME";
-    // document.body.appendChild(btn);
 }
 
 

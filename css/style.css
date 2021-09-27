@@ -67,12 +67,16 @@ td, th {
 }
 
 .jumbotron{
-    background-image: url('');
+    background-image: url("/img/coffeeJT.jpg");
     background-size: cover;
     height: 100%;
 }
 
+#header{
+    color: black;
+    border: 1px solid mintcream;
 
+}
 
 
 

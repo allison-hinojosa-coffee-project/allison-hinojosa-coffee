@@ -70,16 +70,14 @@ function myFunction() {
 
 
 
-function addCoffee() {
+function addCoffee(e) {
+    e.preventDefault()
     var text = "";
-    var inputs = document.querySelectorAll("input[type=text]");
-    for (var i = 0; i < inputs.length; i++) {
-        text += inputs[i].value;
-    }
-    var ownCoffee = document.createElement("ownCoffee");
-    var typedText = document.createTextNode(text);
-    ownCoffee.appendChild(typedText);
-    document.getElementById("coffees").appendChild(typedText);
+    var inputs = document.querySelectorAll("#ownCoffee").value;
+    var roastInput = document.querySelector("#roast-selection-new").value
+    var newCoffeeType = {id:coffees.length+1, name:input, roast:roastInput}
+    coffees.push(newCoffeeType)
+    tbody.innerHTML = renderCoffees(coffees)
 }
 
 
@@ -112,7 +110,7 @@ function addCoffee() {
 
 var tbody = document.querySelector('#coffees');
 // var submitButton = document.querySelector('#roast-selection');
-var submitButton = document.querySelector('#ownCoffee');
+var submitButton = document.querySelector('#newVersionCoffee');
 var roastSelection = document.querySelector('#roast-selection');
 var selectRoastButton = document.querySelector('#newRoast');
 // var restart = document.querySelector('.originalList');

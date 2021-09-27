@@ -26,31 +26,44 @@
 <!--</div>-->
 
 <div class="container">
-<!--    <div class="row">-->
+    <!--    <div class="row">-->
     <div class="choices">
         <form class="coffee-selection">
             <label for="roast-selection"></label>
             <select id="roast-selection">
-                <option >all</option>
+                <option>all</option>
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
+            <div>
+                <label for="myInput"></label>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Coffee by Name">
+            </div>
             <input id="newRoast" type="submit" value="submit">
+
         </form>
 
-        <label for="myInput"></label><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Coffee by Name">
-        <input id="submit" type="submit">
-    </div>
-    <!--                    </form>-->
 
-    <div class="newOne">
-        <label for="ownCoffee">Enter a New Coffee Name</label><br>
-        <input class="newAgain" type="text" id="ownCoffee" name="ownCoffee" placeholder="Add Coffee Name">
-        <input type="submit" value="submit" onClick="addCoffee()">
-        <!--        <input type="submit" value="submit">-->
+        <br>
+        <!--                    </form>-->
+
+        <form>
+            <div class="newOne">
+                <label for="ownCoffee">Enter a New Coffee Name</label>
+                <input class="newAgain" type="text" id="ownCoffee" name="ownCoffee" placeholder="Add Coffee Name">
+                <label for="roast-selection-new"> Select a Roast Type</label>
+                <select id="roast-selection-new">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <input type="submit" value="submit" id="newVersionCoffee">
+                <!--        <input type="submit" value="submit">-->
+            </div>
+        </form>
     </div>
-</div>
 </div>
 <!--        <div class="col">-->
 <!--            <div class="col">-->

@@ -14,87 +14,60 @@
 
 
 <div class="jumbotron">
-    <h1 class="display-4">COFFEE</h1>
+    <h1 id="coffeeBeans"><span>COFFEE</span></h1>
     <hr class="my-4">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 </div>
 
-<!--<div class="row justify-content-center align-items-center">-->
-<!--    <h1>Coffee!</h1>-->
-<!--</div>-->
-<!--testing-->
+
 <div class="container">
-    <!--    <div class="row">-->
-    <div class="choices">
-        <form class="coffee-selection">
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
-                <option>all</option>
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-            <div>
-                <label for="myInput"></label>
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Coffee by Name">
-            </div>
-            <input id="newRoast" type="submit" value="submit">
-
-        </form>
-
-
-        <br>
-        <!--                    </form>-->
-
-        <form>
-            <div class="newOne">
-                <label for="ownCoffee">Enter a New Coffee Name</label>
-                <input class="newAgain" type="text" id="ownCoffee" name="ownCoffee" placeholder="Add Coffee Name">
-                <label for="roast-selection-new"> Select a Roast Type</label>
-                <select id="roast-selection-new">
+        <div class="choices">
+    <div class="row">
+            <form class="coffee-selection">
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
                     <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-                <input type="submit" value="submit" id="newVersionCoffee">
-                <!--        <input type="submit" value="submit">-->
+                <div>
+                    <label for="myInput"></label>
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Coffee by Name">
+                </div>
+                <input id="newRoast" type="submit" value="submit">
+            </form>
+
+
+            <br>
+            <!--                    </form>-->
+            <div class="newOne">
+
+                <form>
+                    <label for="ownCoffee">Enter a New Coffee Name</label>
+                    <input class="newAgain" type="text" id="ownCoffee" name="ownCoffee" placeholder="Add Coffee Name">
+                    <label for="roast-selection-new"> Select a Roast Type</label>
+                    <select id="roast-selection-new">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input type="submit" value="submit" id="newVersionCoffee">
+                    <!--        <input type="submit" value="submit">-->
+                </form>
             </div>
-        </form>
+
+        </div>
     </div>
 </div>
-<!--        <div class="col">-->
-<!--            <div class="col">-->
 
-<!--    <div>-->
+
 <div class="col" id="coffees">
     <div>ID</div>
     <div>NAME</div>
     <div>ROAST</div>
 </div>
 
-
-<!--    <div>-->
-<!--        <div class="col" id="coffees">-->
-<!--            <div>ID</div>-->
-<!--            <div>NAME</div>-->
-<!--            <div>ROAST</div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-
-<!--    <form>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--            <option>all</option>-->
-<!--        </select>-->
-<!--&lt;!&ndash;        <label for="userCoffee">Coffee Name</label><br>&ndash;&gt;-->
-<!--        <h5>Coffee Name</h5>-->
-<!--        <input type="text" id="userCoffee" name="newCoffee" placeholder="Enter New Coffee Name"><br>-->
-<!--        <input type="submit" value="Submit">-->
-<!--    </form>-->
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
+    html += '<td>' + coffee.id + '</td>';
     html += '<h3>' + coffee.name +'</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -19,13 +19,18 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
+    console.log("insideofbigcoffees")
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (selectedRoast === "all"){
+            filteredCoffees = coffees
         }
+
+        console.log(filteredCoffees)
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -71,6 +76,10 @@ function addCoffee() {
     for (var i = 0; i < inputs.length; i++) {
         text += inputs[i].value;
     }
+    var ownCoffee = document.createElement("ownCoffee");
+    var typedText = document.createTextNode(text);
+    ownCoffee.appendChild(typedText);
+    document.getElementById("coffees").appendChild(typedText);
     var own = document.createElement("ownCoffee");
     var node = document.createTextNode(text);
     own.appendChild(node);
@@ -82,6 +91,26 @@ function addCoffee() {
 }
 
 
+// function blah() {
+//     var inputs = document.querySelectorAll("input[type=text]");
+//     document.getElementsByTagName("inputs")[0].setAttribute("type", "div");
+// }
+
+// function turnDiv(""){
+//     var turn = document.setAttribute("")
+//     for (var i = 0; i < inputs.length; i++) {
+//         addCoffee += inputs[i].value;
+//     }
+// }
+
+// (function() {
+//     // Get the search link anchor by id
+//     var searchLink = document.getElementById("search-link");
+//     searchLink.setAttribute("class", "btn btn-default");
+// })();
+
+
+
 // function myFunction() {
 //     var btn = document.createElement("BUTTON");
 //     btn.innerHTML = "CLICK ME";
@@ -90,12 +119,23 @@ function addCoffee() {
 
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#roast-selection');
+// var submitButton = document.querySelector('#roast-selection');
+var submitButton = document.querySelector('#ownCoffee');
 var roastSelection = document.querySelector('#roast-selection');
+var selectRoastButton = document.querySelector('#newRoast');
+// var restart = document.querySelector('.originalList');
+// var restart = document.querySelector('#originalList');
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// roastSelection.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', addCoffee);
+selectRoastButton.addEventListener('click', updateCoffees)
+// restart.addEventListener('click', renderCoffee)
+
+
+
 console.log(submitButton)
 
 console.log(renderCoffees(coffees))

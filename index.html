@@ -12,38 +12,44 @@
 </head>
 <body>
 
-<!--<div>-->
-<!--<h1>Coffee!</h1>-->
 
-<div class="row justify-content-center align-items-center">
-    <h1>Coffee!</h1>
+<div class="jumbotron">
+    <h1 class="display-4">COFFEE</h1>
+    <hr class="my-4">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 </div>
 
+<!--<div class="row justify-content-center align-items-center">-->
+<!--    <h1>Coffee!</h1>-->
+<!--</div>-->
+
 <div class="container">
+<!--    <div class="row">-->
     <div class="choices">
-<!--        <form class="coffee-selection">-->
+        <form class="coffee-selection">
             <label for="roast-selection"></label>
             <select id="roast-selection">
-                <option>all</option>
+                <option >all</option>
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
-<!--        </form>-->
+            <input id="newRoast" type="submit" value="submit">
+        </form>
 
-        <label for="myInput"></label><input type="text" id="myInput" onkeyup="myFunction()"
-                                            placeholder="Search for Coffee by Name">
+        <label for="myInput"></label><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Coffee by Name">
         <input id="submit" type="submit">
     </div>
     <!--                    </form>-->
-    <br>
+
     <div class="newOne">
         <label for="ownCoffee">Enter a New Coffee Name</label><br>
         <input class="newAgain" type="text" id="ownCoffee" name="ownCoffee" placeholder="Add Coffee Name">
-        <input type="submit" onClick="addCoffee()">
+        <input type="submit" value="submit" onClick="addCoffee()">
+        <!--        <input type="submit" value="submit">-->
     </div>
 </div>
-
+</div>
 <!--        <div class="col">-->
 <!--            <div class="col">-->
 
